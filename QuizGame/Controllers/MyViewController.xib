@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyViewController" customModule="QuizGame" customModuleProvider="target">
+            <connections>
+                <outlet property="QuizTableView" destination="d8r-jM-75N" id="QcA-0v-6O7"/>
+                <outlet property="buttonDohvati" destination="Uqc-nk-gqO" id="mGs-eU-M6y"/>
+                <outlet property="labelFailed" destination="RWF-l3-Qp4" id="Wez-f5-2Na"/>
+                <outlet property="labelFunFact" destination="ufo-wT-tm1" id="VOk-JX-wA5"/>
+                <outlet property="questionViewContainer" destination="Q42-cM-FAU" id="xVE-JZ-TaV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqc-nk-gqO">
+                    <rect key="frame" x="114" y="80" width="186" height="95"/>
+                    <color key="backgroundColor" red="0.91110175848007202" green="0.90015333890914917" blue="0.36318278312683105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                    <state key="normal" title="DOHVATI">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonTAP:" destination="-1" eventType="touchUpInside" id="Ved-nI-2Ae"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FUN FACT.... ?    Hint: Klikni gumb DOHVATI da bi mogao otkriti fun fact!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufo-wT-tm1">
+                    <rect key="frame" x="8" y="201" width="398" height="46"/>
+                    <color key="backgroundColor" red="0.92847949266433716" green="0.81353110074996948" blue="0.67022854089736938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="1j9-gJ-rKl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neuspjelo dohvacanje sa servera! Pokusaj ponovno!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWF-l3-Qp4">
+                    <rect key="frame" x="293" y="80" width="121" height="102"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q42-cM-FAU">
+                    <rect key="frame" x="56" y="757" width="302" height="117"/>
+                    <color key="backgroundColor" red="0.94549316167831421" green="0.94359952211380005" blue="0.79227906465530396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="190" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d8r-jM-75N">
+                    <rect key="frame" x="8" y="266" width="398" height="596"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.94549316167831421" green="0.94359952211380005" blue="0.79227906465530396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ufo-wT-tm1" firstAttribute="centerX" secondItem="Uqc-nk-gqO" secondAttribute="centerX" id="H3d-cR-QzE"/>
+                <constraint firstItem="ufo-wT-tm1" firstAttribute="top" secondItem="Uqc-nk-gqO" secondAttribute="bottom" constant="26" id="LZw-if-hai"/>
+                <constraint firstItem="Uqc-nk-gqO" firstAttribute="top" secondItem="RWF-l3-Qp4" secondAttribute="top" id="Uh8-gf-T2l"/>
+                <constraint firstItem="d8r-jM-75N" firstAttribute="trailing" secondItem="ufo-wT-tm1" secondAttribute="trailing" id="W9e-6l-gO6"/>
+                <constraint firstItem="Q42-cM-FAU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="757" id="Wn1-eU-py8"/>
+                <constraint firstItem="RWF-l3-Qp4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="293" id="Wzy-8X-FUW"/>
+                <constraint firstItem="ufo-wT-tm1" firstAttribute="centerX" secondItem="Q42-cM-FAU" secondAttribute="centerX" id="YrG-qQ-XCa"/>
+                <constraint firstAttribute="trailing" secondItem="RWF-l3-Qp4" secondAttribute="trailing" id="ch3-36-CHR"/>
+                <constraint firstItem="d8r-jM-75N" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iI1-Dx-zGS"/>
+                <constraint firstItem="Uqc-nk-gqO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="114" id="lb5-5N-bKC"/>
+                <constraint firstItem="d8r-jM-75N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="ltf-Oj-Oty"/>
+                <constraint firstItem="Q42-cM-FAU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="56" id="mE4-PO-3ry"/>
+                <constraint firstAttribute="bottom" secondItem="Q42-cM-FAU" secondAttribute="bottom" constant="22" id="mMj-ab-ZZm"/>
+                <constraint firstItem="ufo-wT-tm1" firstAttribute="top" secondItem="RWF-l3-Qp4" secondAttribute="bottom" constant="19" id="n8i-be-9uZ"/>
+                <constraint firstItem="d8r-jM-75N" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="pql-Dp-aN7"/>
+                <constraint firstItem="Uqc-nk-gqO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="qdt-xc-APq"/>
+                <constraint firstItem="ufo-wT-tm1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="201" id="v27-Fa-0jF"/>
+                <constraint firstItem="d8r-jM-75N" firstAttribute="leading" secondItem="ufo-wT-tm1" secondAttribute="leading" id="yi7-h9-TW0"/>
+                <constraint firstItem="d8r-jM-75N" firstAttribute="top" secondItem="ufo-wT-tm1" secondAttribute="bottom" constant="19" id="zDO-Bf-BG2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-642.02898550724638" y="89.732142857142847"/>
+        </view>
+    </objects>
+</document>
