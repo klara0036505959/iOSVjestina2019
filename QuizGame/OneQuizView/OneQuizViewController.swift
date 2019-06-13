@@ -81,8 +81,12 @@ class OneQuizViewController: UIViewController {
             for i in 0...19 {
                 if let dict=podaci[i] as? [String:Any] {
                     
+                    let score: String=(dict["score"]! as? String)!
+                    let score2: Double=Double(score) as! Double
+                    
                     self.usernames20.append((dict["username"]! as? String)!)
-                    self.scores20.append((dict["score"]! as? String)!)
+                    self.scores20.append(String(score2.rounded()))
+                    //self.scores20.append((dict["score"]! as? String)!)
                 }
             }
             

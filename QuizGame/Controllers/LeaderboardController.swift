@@ -42,7 +42,7 @@ class LeaderboardController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "Top20CellTableViewCell", for: indexPath) as! Top20CellTableViewCell
         
     
-        cell.userIdLabel.text = usernamesView20[indexPath.row]+" "+scoresView20[indexPath.row]
+        cell.userIdLabel.text = usernamesView20[indexPath.row]+"       "+scoresView20[indexPath.row]
         cell.numberLabel.text=String(indexPath.row+1)+"."
         return cell
     }
